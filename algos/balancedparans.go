@@ -2,7 +2,7 @@ package algos
 
 import "github.com/arunsivasankaran/go-algorithms-and-datastructures/datastructures"
 
-// CheckbalancedParans checks a parans string to see if its balanced
+// CheckbalancedParans checks a string of parans to see if its balanced eg {{}} -> true, {{} -> false
 func CheckbalancedParans(parans string) bool {
 
 	paranStack := new(datastructures.Stack)
