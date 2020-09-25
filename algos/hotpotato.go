@@ -6,7 +6,7 @@ import (
 	"github.com/arunsivasankaran/go-algorithms-and-datastructures/datastructures"
 )
 
-// Hotpotato tells us who survies a game of hotpotato
+// Hotpotato takes a list of names and a number and tells us who survives a game of hotpotato
 func Hotpotato(names []string, num int) string {
 
 	var newQueue datastructures.Queue

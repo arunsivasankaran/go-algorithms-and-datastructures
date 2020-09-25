@@ -4,7 +4,7 @@ var primes = []int{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 5
 
 const alphabets = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-// AnagramCheck returns true if 2 strings are anagrams
+// AnagramCheck checks if 2 given string are anagrams
 func AnagramCheck(first string, second string) bool {
 	if len(first) != len(second) {
 		return false

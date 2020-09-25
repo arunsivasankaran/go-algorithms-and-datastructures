@@ -1,6 +1,6 @@
 package algos
 
-// BinarySearch is better (sometimes) than Search
+// BinarySearch search a given list for a value
 func BinarySearch(list []int, value int) int {
 
 	if len(list) == 0 {

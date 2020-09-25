@@ -1,22 +1,21 @@
 package datastructures
 
-// GenericList is awesome
+// GenericList is a generic list datastructure
 type GenericList struct {
-	Head *Node
+	Head *node
 }
 
-type ListData struct {
+type listData struct {
 	key   string
 	value interface{}
 }
 
-// Node is awesome
-type Node struct {
-	Next *Node
-	Data ListData
+type node struct {
+	Next *node
+	Data listData
 }
 
-// IsEmpty returns true when empty
+// IsEmpty returns true if GenericList is empty
 func (ll *GenericList) IsEmpty() bool {
 	return ll.Head == nil
 }
@@ -35,11 +34,11 @@ func (ll *GenericList) Size() int {
 	return count
 }
 
-// Append is awesome
+// Append adds an key/value to the end of the list
 func (ll *GenericList) Append(key string, value interface{}) bool {
-	nextNode := &Node{
+	nextNode := &node{
 		Next: ll.Head,
-		Data: ListData{key, value},
+		Data: listData{key, value},
 	}
 
 	ll.Head = nextNode
@@ -47,7 +46,7 @@ func (ll *GenericList) Append(key string, value interface{}) bool {
 	return true
 }
 
-// Get gets
+// Get returns the value of key if present
 func (ll *GenericList) Get(key string) interface{} {
 	cur := ll.Head
 
@@ -61,7 +60,7 @@ func (ll *GenericList) Get(key string) interface{} {
 	return nil
 }
 
-// Remove is awesome
+// Remove a key/value pair by key
 func (ll *GenericList) Remove(key string) bool {
 	cur := ll.Head
 
